@@ -1,12 +1,6 @@
-# BCGov Astro Starter
+# First Nations Leaders' Gathering
 
-An Astro boilerplate to use as a starting point for static sites in the B.C. Government.
-
-Supports simple static websites with:
-- basic starter styles
-- built in SEO features
-- baseline accessibility support
-- starter Astro setup
+An Astro website for the First Nations Leaders' Gathering.
 
 ## Prerequisites
 
