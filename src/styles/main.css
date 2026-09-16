@@ -149,10 +149,25 @@ body {
   }
 }
 
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  @media screen and (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.col {
+  width: 100%;
+}
+
+
 /* view transitions */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition {
-      navigation: auto;
+    navigation: auto;
   }
 }
 
@@ -231,6 +246,14 @@ a {
   &:focus {
     color: var(--clr-blue-100);
   }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
 }
 
 hr {

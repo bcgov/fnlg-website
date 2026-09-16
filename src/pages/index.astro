@@ -1,12 +1,219 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import { ACTION_QUERY_PARAMS } from 'astro:actions';
 
-const pageTitle = "Page title";
+const pageTitle = `B.C. Cabinet & First Nations Leaders’ Gathering`;
 const description = "Page meta description";
 ---
 
 <Layout title={pageTitle} desc={description}>
     <div class="container">
-		<h1>BCGov Astro Starter</h1>
+		<h1>B.C. Cabinet & First Nations Leaders’ Gathering</h1>
 	</div>
+	<section class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="https://placehold.co/1600x900" class="img-responsive">
+				</div>
+				<div class="col">
+					<h2>Welcome Message</h2>
+					<p>The 2026 B.C. Cabinet and First Nations Leaders’ Gathering takes place Tuesday, November 3 and Wednesday, November 4, 2026, on the territories of the Xʷməθkʷəy̓əm (Musqueam), Sḵwx ̓wú7mesh (Squamish) and səlilwətaɬ (Tsleil-Waututh) First Nations at the Vancouver Convention Centre West.</p>
+					<p>The Gathering is a partnership between the First Nations Leadership Council (comprised of the BC Assembly of First Nations, the First Nations Summit and the Union of BC Indian Chiefs) and the Government of British Columbia. As one of the largest meetings of provincial and First Nations leaders in the country, the Gathering is designed to recognize, respect and honours relationships, while fostering dialogue and collaboration through plenary sessions, discussion forums and one-on-one meetings.</p>
+					<p>One-on-one meetings between First Nations leaders and provincial government representatives will be offered on-site. Please register and submit meetings requests as soon as possible.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="agenda">
+		<div class="container">
+			<h2 id="agenda">Agenda</h2>
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<h3>November 2</h3>
+						<p>Monday</p>
+						<h4>2:00 pm to 7:00 pm</h4>
+						<p>Early registration</p>
+						<h4>Evening</h4>
+						<p>Reception hosted by the Business Council of British Columbia and the BC Federation of Labour</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<h3>November 3</h3>
+						<p>Tuesday</p>
+						<h4>7:30 am</h4>
+						<p>Registration opens</p>
+						<h4>7:30 am to 8:30 am</h4>
+						<p>Breakfast</p>
+						<h4>8:30 am to 5:00 pm</h4>
+						<p>Opening Remarks, delegate sessions in plenary and discussions, and one-on-one meetings</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<h3>November 4</h3>
+						<p>Wednesday</p>
+						<h4>7:30 am to 8:30 am</h4>
+						<p>Breakfast</p>
+						<h4>8:30 am to 4:00 pm</h4>
+						<p>Delegate sessions in plenary and discussions, one-on-one meetings, and Closing Remarks</p>
+					</div>
+				</div>
+			</div>
+			<p>The Gathering Program will be available on-site at the Registration Desk.</p>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<h2 id="registration">Registration</h2>
+						<p>Registration is available for up to two representatives per community, plus one youth delegate, for a maximum of three delegates. A youth delegate is generally considered to be between 18 and 29 years of age.</p>
+						<p class="bold">All participants must be registered by Friday, September 25, 2026.</p>
+						<p>To register for the Gathering, click the “Register Now” button and complete a registration form for each delegate.</p>
+						<div class="btn-row">
+							<a href="https://apps.nrs.gov.bc.ca/pub/fnlg/" class="btn">Register Now</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<h2 id="meetings">Request a Meeting</h2>
+					<p>We are pleased to schedule one-on-one meetings between First Nations leaders, Cabinet Ministers and senior provincial government leadership.</p>
+					<p>We ask that all participants in one-on-one meetings be registered for the Gathering. All meetings for the Gathering will take place in person only. Meeting schedules and location details will be provided once all meetings are confirmed.</p>
+					<p class="bold">Delegates must submit their meeting requests by Friday, September 25, 2026.</p>
+					<p>Each First Nation may submit up to 10 meeting requests. The number of meetings scheduled for each First Nation will depend on the volume of requests received.</p>
+					<p>To submit a meeting request, click the “Request a Meeting” button and complete the meeting request form.</p>
+					<p>All sessions and one-on-one meetings will take place in-person at the Gathering.</p>
+					<div class="btn-row">
+						<a href="https://apps.nrs.gov.bc.ca/pub/fnlg/request" class="btn">Request a Meeting</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="https://placehold.co/1600x900" class="img-responsive">
+				</div>
+				<div class="col">
+					<img src="https://placehold.co/1600x900" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h2 id="travel">Travel & accommodation</h2>
+			<div class="row">
+				<div class="col">
+					<p>One representative and one youth delegate from each community are eligible for reimbursement for a total of two representatives, one of which is a youth delegate. Youth are generally considered to be between 18 to 29 years of age. Reimbursement is available to representatives travelling more than 32 km from their home to the Gathering as per below:</p>
+					<h3>Meal Per Diems</h3>
+					<ul>
+						<li>No meal reimbursements will be provided.</li>
+						<li>Breakfast and lunch will be provided at the Gathering.</li>
+					</ul>
+					<h3>Travel</h3>
+					<ul>
+						<li>Actual costs for flights (receipts are required).</li>
+						<li>Transportation via taxi or public transit to and from the airport (receipts are required).</li>
+						<li>Travel using personal vehicle will be reimbursed at $0.67/km.</li>
+					</ul>
+					<h3>Accommodation</h3>
+					<ul>
+						<li>Actual costs for hotel for up to two nights at a maximum rate of $265/night (receipts required).</li>
+						<li>Participants are asked to book through hotel blocks at the Coast Coal Harbour Hotel or Blue Horizon Hotel as the first choice for accommodation.</li>
+					</ul>
+					<h3>Submitting a travel reimbursement claim</h3>
+					<ul>
+						<li>For reimbursement, attendees must submit receipts along with a completed travel expense form to <a href="mailto:rhianon.harrison@gov.bc.ca">Rhianon Harrison</a> (<a href="mailto:rhianon.harrison@gov.bc.ca">rhianon.harrison@gov.bc.ca)</a> by March 20, 2027.</li>
+						<li>Travel expense forms can be downloaded to print here: <a href="#">Natural Resource Sector Non-Government Employee Travel Expense Claim for Group 1 (PDF, 236KB).</a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<h3>Making reservations</h3>
+					<p>Please note that the hotel room block rates are <span class="bold">available to First Nations delegates only</span>. Booking links are now available for eligible delegates to book their hotel rooms online. The following links take you directly to the hotel’s websites to access the group rate. Reservations can be made until October 2, 2026, or until the allocated room blocks are sold out.</p>
+					<div class="card">
+						<p>
+							<span class="bold">Hotel</span>: Pinnacle Hotel Harbourfront<br />
+							<span class="bold">Address</span>: 1133 West Hastings Street, Vancouver, V6E 3T3<br />
+							<span class="bold">Reservations Phone</span>: <a href="tel:604-689-9211">604-689-9211</a>
+						</p>
+						<div class="btn-row">
+							<a href="https://book.passkey.com/event/51194585/owner/2075/home" class="btn">Book with Pinnacle Hotel Harbourfront</a>
+						</div>
+					</div>
+					<div class="card">
+						<p>
+							<span class="bold">Hotel</span>: Coast Coal Harbour Hotel<br />
+							<span class="bold">Address</span>: 1180 West Hastings Street, Vancouver, V6E 4R5<br />
+							<span class="bold">Reservations Phone</span>: <a href="tel:604-697–0202">604-697–0202</a> | toll free: <a href="tel:1-800-716-6199">1-800-716-6199</a>
+						</p>
+						<div class="btn-row">
+							<a href="https://book.passkey.com/e/51188787" class="btn">Book with Coast Coal Harbour Hotel</a>
+						</div>
+						<p>Guests can also call directly at <a href="tel:1-800-663-1144">1-800-663-1144</a> with the reservation Group Code #8069100.</p>
+					</div>
+					<div class="card">
+						<p>
+							<span class="bold">Hotel</span>: Blue Horizon Hotel<br />
+							<span class="bold">Address</span>: 1225 Robson Street, Vancouver, V6E 1C3<br />
+							<span class="bold">Reservations Phone</span>: <a href="tel:604-688-1411">604-688-1411</a>
+						</p>
+						<div class="btn-row">
+							<a href="https://www.bluehorizonhotel.com/" class="btn">Book with Coast Coal Harbour Hotel</a>
+						</div>
+						<details>
+							<summary>Booking Instructions</summary>
+							<p>Go to our official website:  <a href="https://www.bluehorizonhotel.com">https://www.bluehorizonhotel.com</a></p>
+							<ol>
+								<li>Click the blue <span class="bold">Reservations</span> box in the top right corner</li>
+								<li>Click on <span class="bold">Special Codes or Rates</span> (under the check out date, top right corner) and click <span class="bold">Promo Code</span> to drop down and switch to <span class="bold">Group Code</span></li>
+								<li>Enter your code: <span class="bold">BCFNLG 26</span> (not promo code) and hit <span class="bold">Apply</span>. Please note there is a space before 26 and the code will require the space</li>
+								<li>Use the calendar below to select the desired dates and hit <span class="bold">Search</span></li>
+								<li>Select the <span class="bold">Book Now</span> box and fill in the details and credit card number. A confirmation will automatically be sent.</li>
+							</ol>
+						</details>
+						<p>Guests can alternatively call the Reservation Department to book a room from the BCFNLG 26 block over the phone at <a href=tel:604-688-1411">604-688-1411</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h2 id="media">Videography, photography & media</h2>
+			<div class="row">
+				<div class="col">
+					<h3>Information for media</h3>
+					<p>Members of the media are welcome to attend FNLG’s media availability and witness the opening remarks the morning of day one and again for the closing remarks the afternoon of day two. More details on registration for these opportunities will be made available in the days prior to the event. In the meantime, media can express their interest in attending by emailing both <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> and <a href="mailto:alyha.bardi@gov.bc.ca">alyha.bardi@gov.bc.ca</a>.</p>
+					<p>Should media wish to set up interviews with members of the First Nations Leadership Council, please contact the individual organization. If the desire is to have these interviews on-site or inside the Vancouver Convention Centre, please also include both <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> and <a href="mailto:alyha.bardi@gov.bc.ca">alyha.bardi@gov.bc.ca</a>.</p>
+					<p>Should media wish to set up interviews with Cabinet ministers, please contact the Government Communications and Public Engagement media liaison for that respective minister. Please see media contact list for media liaisons from government by ministry: <a href="https://news.gov.bc.ca/contacts">https://news.gov.bc.ca/contacts</a></p>
+				</div>
+				<div class="col">
+					<h3>Information for delegations</h3>
+					<p>Delegates and leaders interested in having personal photographers or videographers attend FNLG with a delegation or on an ad-hoc basis (to support documentaries, in-community use, social media etc), are asked to submit a request to the FNLC and the Province for permission. Please email <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> by October 26, 2026.</p>
+					<p>If permitted, the photographer/videographer will be provided credentials at the media registration desk.  The photographer/videographer should seek consent from any other individuals that will be included in photos/videos.</p>
+					<p>Delegates who would like to set up media interviews on site with their leadership should submit a request for media to access FNLG. Please email both <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> and <a href="mailto:alyha.bardi@gov.bc.ca">alyha.bardi@gov.bc.ca</a>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<h2>Contact us</h2>
+			<div class="row">
+				<div class="col">
+					For questions regarding your registration or the Gathering’s agenda, please contact our event services team at <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> or <a href="tel:604-646-3583">604-646-3583</a>.
+				</div>
+				<div class="col">
+					For questions regarding one-on-one meetings, please contact Amber Nash, Leaders’ Gathering Engagement Lead at <a href="mailto:minmtg@gov.bc.ca">minmtg@gov.bc.ca</a> or <a href="tel:250-952-1970">250-952-1970</a>.
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
