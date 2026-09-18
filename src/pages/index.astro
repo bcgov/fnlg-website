@@ -1,23 +1,28 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
-import { ACTION_QUERY_PARAMS } from 'astro:actions';
+import coverPhoto from '@images/fnlg-cover-704x479@2x.jpg';
+import gallery1 from '@images/fnlg-gallery1-720x480@2x.jpg';
+import gallery2 from '@images/fnlg-gallery2-720x480@2x.jpg';
 
 const pageTitle = `B.C. Cabinet & First Nations Leaders’ Gathering`;
 const description = "Page meta description";
 ---
 
 <Layout title={pageTitle} desc={description}>
-    <div class="container">
-		<h1>B.C. Cabinet & First Nations Leaders’ Gathering</h1>
-	</div>
+	<section class="hero">
+		<div class="container">
+			<h1 class="display">B.C. Cabinet & First Nations Leaders’ Gathering</h1>
+		</div>
+	</section>
 	<section class="intro">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<img src="https://placehold.co/1600x900" class="img-responsive">
+					<Image src={coverPhoto} class="img-responsive" alt=""></Image>
 				</div>
 				<div class="col">
-					<h2>Welcome Message</h2>
+					<h2 class="mt-0">Welcome Message</h2>
 					<p>The 2026 B.C. Cabinet and First Nations Leaders’ Gathering takes place Tuesday, November 3 and Wednesday, November 4, 2026, on the territories of the Xʷməθkʷəy̓əm (Musqueam), Sḵwx ̓wú7mesh (Squamish) and səlilwətaɬ (Tsleil-Waututh) First Nations at the Vancouver Convention Centre West.</p>
 					<p>The Gathering is a partnership between the First Nations Leadership Council (comprised of the BC Assembly of First Nations, the First Nations Summit and the Union of BC Indian Chiefs) and the Government of British Columbia. As one of the largest meetings of provincial and First Nations leaders in the country, the Gathering is designed to recognize, respect and honours relationships, while fostering dialogue and collaboration through plenary sessions, discussion forums and one-on-one meetings.</p>
 					<p>One-on-one meetings between First Nations leaders and provincial government representatives will be offered on-site. Please register and submit meetings requests as soon as possible.</p>
@@ -32,40 +37,40 @@ const description = "Page meta description";
 				<div class="col">
 					<div class="card">
 						<h3>November 2</h3>
-						<p>Monday</p>
+						<p class="h3 day">Monday</p>
 						<h4>2:00 pm to 7:00 pm</h4>
-						<p>Early registration</p>
+						<p class="mt-0">Early registration</p>
 						<h4>Evening</h4>
-						<p>Reception hosted by the Business Council of British Columbia and the BC Federation of Labour</p>
+						<p class="mt-0">Reception hosted by the Business Council of British Columbia and the BC Federation of Labour</p>
 					</div>
 				</div>
 				<div class="col">
 					<div class="card">
 						<h3>November 3</h3>
-						<p>Tuesday</p>
+						<p class="h3 day">Tuesday</p>
 						<h4>7:30 am</h4>
-						<p>Registration opens</p>
+						<p class="mt-0">Registration opens</p>
 						<h4>7:30 am to 8:30 am</h4>
-						<p>Breakfast</p>
+						<p class="mt-0">Breakfast</p>
 						<h4>8:30 am to 5:00 pm</h4>
-						<p>Opening Remarks, delegate sessions in plenary and discussions, and one-on-one meetings</p>
+						<p class="mt-0">Opening Remarks, delegate sessions in plenary and discussions, and one-on-one meetings</p>
 					</div>
 				</div>
 				<div class="col">
 					<div class="card">
 						<h3>November 4</h3>
-						<p>Wednesday</p>
+						<p class="h3 day">Wednesday</p>
 						<h4>7:30 am to 8:30 am</h4>
-						<p>Breakfast</p>
+						<p class="mt-0">Breakfast</p>
 						<h4>8:30 am to 4:00 pm</h4>
-						<p>Delegate sessions in plenary and discussions, one-on-one meetings, and Closing Remarks</p>
+						<p class="mt-0">Delegate sessions in plenary and discussions, one-on-one meetings, and Closing Remarks</p>
 					</div>
 				</div>
 			</div>
 			<p>The Gathering Program will be available on-site at the Registration Desk.</p>
 		</div>
 	</section>
-	<section>
+	<section class="dark bg-feather pv-lg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -80,35 +85,38 @@ const description = "Page meta description";
 					</div>
 				</div>
 				<div class="col">
-					<h2 id="meetings">Request a Meeting</h2>
-					<p>We are pleased to schedule one-on-one meetings between First Nations leaders, Cabinet Ministers and senior provincial government leadership.</p>
-					<p>We ask that all participants in one-on-one meetings be registered for the Gathering. All meetings for the Gathering will take place in person only. Meeting schedules and location details will be provided once all meetings are confirmed.</p>
-					<p class="bold">Delegates must submit their meeting requests by Friday, September 25, 2026.</p>
-					<p>Each First Nation may submit up to 10 meeting requests. The number of meetings scheduled for each First Nation will depend on the volume of requests received.</p>
-					<p>To submit a meeting request, click the “Request a Meeting” button and complete the meeting request form.</p>
-					<p>All sessions and one-on-one meetings will take place in-person at the Gathering.</p>
-					<div class="btn-row">
-						<a href="https://apps.nrs.gov.bc.ca/pub/fnlg/request" class="btn">Request a Meeting</a>
+					<div class="card">
+						<h2 id="meetings">Request a Meeting</h2>
+						<p>We are pleased to schedule one-on-one meetings between First Nations leaders, Cabinet Ministers and senior provincial government leadership.</p>
+						<p>We ask that all participants in one-on-one meetings be registered for the Gathering. All meetings for the Gathering will take place in person only. Meeting schedules and location details will be provided once all meetings are confirmed.</p>
+						<p class="bold">Delegates must submit their meeting requests by Friday, September 25, 2026.</p>
+						<p>Each First Nation may submit up to 10 meeting requests. The number of meetings scheduled for each First Nation will depend on the volume of requests received.</p>
+						<p>To submit a meeting request, click the “Request a Meeting” button and complete the meeting request form.</p>
+						<p>All sessions and one-on-one meetings will take place in-person at the Gathering.</p>
+						<div class="btn-row">
+							<a href="https://apps.nrs.gov.bc.ca/pub/fnlg/request" class="btn">Request a Meeting</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="pv-lg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<img src="https://placehold.co/1600x900" class="img-responsive">
+					<Image src={gallery1} class="img-responsive" alt=""></Image>
 				</div>
 				<div class="col">
-					<img src="https://placehold.co/1600x900" class="img-responsive">
+					<Image src={gallery2} class="img-responsive" alt=""></Image>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<hr />
+	<section class="pv-lg">
 		<div class="container">
-			<h2 id="travel">Travel & accommodation</h2>
+			<h2 id="travel" class="mt-0">Travel & accommodation</h2>
 			<div class="row">
 				<div class="col">
 					<p>One representative and one youth delegate from each community are eligible for reimbursement for a total of two representatives, one of which is a youth delegate. Youth are generally considered to be between 18 to 29 years of age. Reimbursement is available to representatives travelling more than 32 km from their home to the Gathering as per below:</p>
@@ -184,9 +192,9 @@ const description = "Page meta description";
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="pb-lg">
 		<div class="container">
-			<h2 id="media">Videography, photography & media</h2>
+			<h2 id="media" class="mt-0">Videography, photography & media</h2>
 			<div class="row">
 				<div class="col">
 					<h3>Information for media</h3>
@@ -203,9 +211,9 @@ const description = "Page meta description";
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="dark pv-lg bg-feather2">
 		<div class="container">
-			<h2>Contact us</h2>
+			<h2 id="contact" class="mt-0">Contact us</h2>
 			<div class="row">
 				<div class="col">
 					For questions regarding your registration or the Gathering’s agenda, please contact our event services team at <a href="mailto:fnlg@pacegroup.com">fnlg@pacegroup.com</a> or <a href="tel:604-646-3583">604-646-3583</a>.

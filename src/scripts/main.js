@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navBtn.addEventListener("click", toggleNavigation);
   navCloseBtn.addEventListener("click", closeNavigation);
+  
+  listItems.forEach(item => {
+    item.addEventListener("click", closeNavigation);
+  });
 
   screen.orientation.addEventListener("change", (event) => {
     checkScreenWidth();

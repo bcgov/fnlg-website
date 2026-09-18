@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '@images/logo-2x.png';
+import logo from '@images/fnlgLogo-250x60-2x.png';
 import menu from '@images/menu.svg';
 import menuClose from '@images/menu-close.svg';
 
@@ -8,7 +8,7 @@ import menuClose from '@images/menu-close.svg';
 let strSkipMain = 'Skip to Main Content'
 let strSkipNav = 'Skip to Navigation'
 let strSkipAccess = 'Accessibility Statement'
-let strLogo = 'Government of British Columbia'
+let strLogo = 'B.C. Cabinet & First Nations Leaders’ Gathering logo'
 let strSite = `B.C. Cabinet & First Nations Leaders’ Gathering`
 let strOpen = 'Open Menu'
 let strClose = 'Close Menu'
@@ -20,17 +20,19 @@ let strClose = 'Close Menu'
         <a href="#primaryNav" class="btn btn--hivis">{strSkipNav}</a>
         <a href="https://www2.gov.bc.ca/gov/content/home/accessible-government" target="_blank" class="btn btn--hivis">{strSkipAccess}</a>
     </div>
-    <div class="container header__row">
-        <div class="header__row--left">
-            <a href="http://www2.gov.bc.ca/">
-                <Image src={logo} alt={strLogo} class="header__logo" />
-            </a>
-            <p class="header__title"><a href="#">{strSite}</a></p>
-        </div>
-        <div class="header__row--right">
-            <button id="navBtn" class="header__nav-button" aria-label={strOpen} aria-expanded="false" aria-controls="primaryNav">
-                <Image src={menu} alt={strOpen} />
-            </button>
+    <div class="header__top">
+        <div class="header__row container">
+            <div class="header__row--left">
+                <a href="#">
+                    <Image src={logo} alt={strLogo} class="header__logo" />
+                </a>
+                <p class="header__title"><a href="#">{strSite}</a></p>
+            </div>
+            <div class="header__row--right">
+                <button id="navBtn" class="header__nav-button" aria-label={strOpen} aria-expanded="false" aria-controls="primaryNav">
+                    <Image src={menu} alt={strOpen} />
+                </button>
+            </div>
         </div>
     </div>
     <nav id="primaryNav" class="header__nav hidden">
