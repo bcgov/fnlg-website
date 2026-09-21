@@ -260,6 +260,10 @@ hr {
   border-top-color: transparent;
 }
 
+summary {
+  cursor: pointer;
+}
+
 
 /* === BUTTONS ======================================== */
 .btn-row {
@@ -638,13 +642,13 @@ hr {
 }
 
 .bg-feather {
-  background-image: url(images/feathers-bg-large-crop.png);
+  background-image: url(/images/feathers-bg-large-crop.png);
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 .bg-feather2 {
-  background-image: url(images/feathers-bg-large-crop.png);
+  background-image: url(/images/feathers-bg-large-crop.png);
   background-repeat: no-repeat;
   background-position: center left;
   background-size: cover;
